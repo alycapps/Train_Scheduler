@@ -4,12 +4,15 @@ body {
 
 .header {
     border: black dotted;
+    background-color: whitesmoke;
 }
 
 .trainlocation {
     border:navy solid;
+    background-color: whitesmoke;
 }
 
 .addinglocation {
     border: brown dotted;
+    background-color: whitesmoke;
 }
