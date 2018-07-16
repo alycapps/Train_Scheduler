@@ -1,3 +1,15 @@
 body {
     background-color: lightpink;
 }
+
+.header {
+    border: black dotted;
+}
+
+.trainlocation {
+    border:navy solid;
+}
+
+.addinglocation {
+    border: brown dotted;
+}
