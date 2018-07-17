@@ -1,4 +1,5 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+
     //connect to firebase
   // Initialize Firebase
   var config = {
@@ -11,9 +12,35 @@ $(document).ready(function() {
   };
   firebase.initializeApp(config);
 
-
     //display firebase train schedule on page load
+    var database = firebase.database();
+
+    //initial train object
+    var schedule = {
+        train0: "name, destination, time, frequency",
+        train1: "name, destination, time, frequency"
+    };
+
+
     //add train
+    trainname = $("#trainnameloc").val().trim();
+    // push to train array based on length of schedule
+    destination = $("#destinationloc").val().trim();
+    traintime = $("#traintimeloc").val().trim();
+    frequency = $("#frequencyloc").val().trim();
+    //push array to schedule obj
+
+    
         //add details to firebase
+
         //add details to page
-});
+    //for loop for schedule object
+    for (i=0; i<schedule.length; i++) {
+        var trainnum = "train" + i;
+        //for loop for each location in each array in schedule object
+        for (j=0, j<4, j++) {
+            var td = "<td>"
+        }
+    };
+
+// });
