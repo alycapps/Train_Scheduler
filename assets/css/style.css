@@ -1,18 +1,33 @@
 body {
-    background-color: lightpink;
+    background-color: rgb(255, 182, 193);
 }
 
 .header {
-    border: black dotted;
+    border: lightgrey solid;
     background-color: whitesmoke;
 }
 
 .trainlocation {
-    border:navy solid;
-    background-color: whitesmoke;
+    border: whitesmoke solid;
+    background-color: lightgrey;
 }
 
 .addinglocation {
-    border: brown dotted;
+    border: lightgrey solid;
     background-color: whitesmoke;
 }
+
+/* pale yellow
+244 255 95
+
+pale orange
+232 200 154
+
+pale pink
+255 182 193
+
+pale purple
+176 154 232
+
+pale blue 
+99 233 255*/
