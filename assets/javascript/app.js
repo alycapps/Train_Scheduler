@@ -10,6 +10,7 @@
     storageBucket: "train-schedule-d685b.appspot.com",
     messagingSenderId: "747902248747"
   };
+
   firebase.initializeApp(config);
 
     //display firebase train schedule on page load
@@ -40,7 +41,7 @@
         // schedule.push(train0);
         // console.log("schedule: " + schedule);
 
-        database.ref().set({
+        database.ref().push({
             key: train0
           });
     });
@@ -52,8 +53,18 @@
         var trainnum = "train" + i;
         //for loop for each location in each array in schedule object
         for (j=0; j<4; j++) {
-            var td = "<td>"
+            var td = $("<td>");
         }
     };
 
 // });
+
+
+
+// function() {
+// var row = $("<tr");
+// var td1 = $(<td>).text(words);
+// var td2 = $(<td>).text(words);
+//     row.append(td1).append(td2)
+//     tbody.append(row)
+//     }
