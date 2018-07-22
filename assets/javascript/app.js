@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 
     //connect to firebase
  // Initialize Firebase
@@ -18,51 +17,46 @@
     //add train
     $("#submitbttnloc").on("click", function() {
         event.preventDefault();
-        var train0 = [];
         var trainname = $("#trainnameloc").val().trim();
-        // push to train array based on length of schedule
         var destination = $("#destinationloc").val().trim();
         var traintime = $("#traintimeloc").val().trim();
         var frequency = $("#frequencyloc").val().trim();
-        //push array to schedule obj
-        train0.push(trainname);
-        train0.push(destination);
-        train0.push(traintime);
-        train0.push(frequency);
-
-        console.log("train0: " + train0);
-        // schedule.push(train0);
-        // console.log("schedule: " + schedule);
-
+   
+                //add details to firebase
         database.ref().push({
-            key: train0
+            name: trainname,
+            destination: destination,
+            traintime: traintime,
+            frequency: frequency,
           });
+
+        //clear form after submission
+        $("#trainnameloc").val("");
+        $("#destinationloc").val("");
+        $("#traintimeloc").val("");
+        $("#frequencyloc").val("");
     });
-        //add details to firebase
+
 
         //add details to page
-    //for loop for schedule object
-    // for (i=0; i<schedule.length; i++) {
-    //     var trainnum = "train" + i;
-    //     //for loop for each location in each array in schedule object
-    //     for (j=0; j<4; j++) {
-    //         var td = $("<td>");
-    //     }
-    // };
-    function addtrain() {
-        
-    };
 
-    database.ref().on("child_added", addtrain)
+    database.ref().on("child_added", function(snapshot) {
+        console.log(snapshot.val().traintime);
+        //first train time
+        var ftime = snapshot.val().traintime;
+        console.log("ftime: " + ftime)
+        var convftime = moment(ftime, "HH:mm").subtract(1, "years");
+        var freq = snapshot.val().frequency;
+        var currentTime = moment().format("hh:mm");
+        console.log("time: " + currentTime);
+        //difference in time between now and first train
+        var timediff = moment().diff(moment(convftime), "minutes")
+        console.log("difference: " + timediff);
+        var minaway = timediff % freq;
+        var convminaway = moment(minaway).format("hh:mm")
+        console.log(convminaway);
+        var nexttime = moment().add(minaway, "minutes").format("hh:mm")
+        console.log(nexttime);
 
-// });
-
-
-
-// function() {
-// var row = $("<tr");
-// var td1 = $(<td>).text(words);
-// var td2 = $(<td>).text(words);
-//     row.append(td1).append(td2)
-//     tbody.append(row)
-//     }
+        $("#table").append("<tr>" + "<td>" + snapshot.val().name + "<td>" + snapshot.val().destination + "<td>" + snapshot.val().frequency + "<td>" + nexttime + "<td>" + minaway + " min" + "</td>");
+    })
