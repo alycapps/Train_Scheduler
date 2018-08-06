@@ -25,8 +25,10 @@
    <!-- train table -->
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-10 white trainlocation">
-                <h3>Current Train Schedule:</h3>
+            <div class="col-md-10 trainlocation">
+                <div class="main-title">
+                    <h3>Current Train Schedule:</h3>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -38,13 +40,6 @@
                         </tr>
                     </thead>
                     <tbody id="table">
-                        <!-- <tr>
-                            <td>Practice Train</td>
-                            <td>Example Destination</td>
-                            <td>5 min</td>
-                            <td>9:15 PM</td>
-                            <td>5 min</td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>   
@@ -55,26 +50,30 @@
     <!-- adding trains -->
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-10 white addinglocation">
-                <h3>Add a Train:</h3>
-                <form>
-                    <label for="trainnameloc">Train Name:</label>
-                    <br>
-                    <input type="text" id="trainnameloc"><br>
-                    <label for="destinationloc">Destination:</label>
-                    <br>
-                    <input type="text" id="destinationloc"><br>
-                    <label for="traintimeloc">First Train Time:</label>
-                    <br>
-                    <input type="time" id="traintimeloc"><br>
-                    <label for="frequencyloc">Frequency (min):</label>
-                    <br>
-                    <input type="number" id="frequencyloc"><br>
-                    <br>
-                    <input class="btn btn-info" id="submitbttnloc" type="submit" value="Submit">
-                </form>             
+            <div class=" addinglocation card">
+                    <!-- <div class="card"> -->
+                    <div class="card-header">
+                            Add a Train:
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <label for="trainnameloc">Train Name:</label>
+                            <br>
+                            <input type="text" id="trainnameloc"><br>
+                            <label for="destinationloc">Destination:</label>
+                            <br>
+                            <input type="text" id="destinationloc"><br>
+                            <label for="traintimeloc">First Train Time:</label>
+                            <br>
+                            <input type="time" id="traintimeloc"><br>
+                            <label for="frequencyloc">Frequency (min):</label>
+                            <br>
+                            <input type="number" id="frequencyloc"><br>
+                            <br>
+                            <input class="btn btn-info" id="submitbttnloc" type="submit" value="Submit">
+                        </form> 
+                    </div>  
             </div>
-                <div class="col-md-1"></div>
         </div>
     </div>
     <br>

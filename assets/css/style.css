@@ -1,28 +1,40 @@
 body {
-    background-color: rgb(255, 182, 193);
-    /* padding: 0; */
+    background-color: lightgrey;
+    color: #ffffff;
 }
 
 .header {
-    border-bottom: lightgrey solid;
-    background-color: whitesmoke;
+    border-bottom: #8c0032 solid;
+    background-color: #c2185b;
+    text-align: center;
 }
 
 .footer {
-    border-top: lightgrey solid;
-    background-color: whitesmoke;
+    border-top: #8c0032 solid;
+    background-color:  #c2185b;
     text-align: right;
 }
 
 .trainlocation {
-    border: whitesmoke solid;
-    background-color: lightgrey;
+    border: #4b2c20 solid;
+    background-color: #795548;
+    
 }
 
-.addinglocation {
-    border: whitesmoke solid;
-    background-color: lightgrey;
+.card-header {
+    background-color: #4b2c20;
+    border-bottom: #795548 solid;
 }
+
+.card-body {
+    color: #795548;
+    background-color: white;
+    color: #795548;
+}
+
+/* .main-title {
+    background-color: #4b2c20;
+} */
 
 /* pale yellow
 244 255 95
