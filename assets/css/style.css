@@ -15,12 +15,6 @@ body {
     text-align: right;
 }
 
-.trainlocation {
-    border: #4b2c20 solid;
-    background-color: #795548;
-    
-}
-
 .card-header {
     background-color: #4b2c20;
     border-bottom: #795548 solid;
@@ -32,21 +26,6 @@ body {
     color: #795548;
 }
 
-/* .main-title {
+.main-title {
     background-color: #4b2c20;
-} */
-
-/* pale yellow
-244 255 95
-
-pale orange
-232 200 154
-
-pale pink
-255 182 193
-
-pale purple
-176 154 232
-
-pale blue 
-99 233 255*/
+}

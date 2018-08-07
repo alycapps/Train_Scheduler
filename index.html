@@ -15,7 +15,7 @@
 
 <body>
     <!-- header -->
-    <div class="white header">
+    <div class="header">
         <h1>All Aboard!</h1>
         <p>Find the current train schedule below.</p>
     </div>
@@ -25,24 +25,28 @@
    <!-- train table -->
         <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-10 trainlocation">
-                <div class="main-title">
-                    <h3>Current Train Schedule:</h3>
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Current Train Schedule:</h3>
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Train Name</th>
-                            <th>Destination</th>
-                            <th>Frequency (min)</th>
-                            <th>Next Arrival</th>
-                            <th>Minutes Away</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table">
-                    </tbody>
-                </table>
-            </div>   
+            </div>
             <div class="col-md-1"></div>
         </div>
         <br>
@@ -50,10 +54,11 @@
     <!-- adding trains -->
         <div class="row">
             <div class="col-md-1"></div>
-            <div class=" addinglocation card">
+            <div class="col-md-10">
+                <div class="card">
                     <!-- <div class="card"> -->
                     <div class="card-header">
-                            Add a Train:
+                        <h1>Add a Train:</h1>
                     </div>
                     <div class="card-body">
                         <form>
@@ -73,13 +78,14 @@
                             <input class="btn btn-info" id="submitbttnloc" type="submit" value="Submit">
                         </form> 
                     </div>  
+                </div>
             </div>
         </div>
     </div>
     <br>
 
     <!-- Footer -->
-    <div class="white footer">
+    <div class="footer">
         <img src="assets/TrainIcons/trainicon2.png" alt="choo-choo">
         <br>
     </div>
