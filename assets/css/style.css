@@ -1,6 +1,7 @@
 body {
     background-color: lightgrey;
     color: #ffffff;
+    background-image: url("./background.png");
 }
 
 .header {
